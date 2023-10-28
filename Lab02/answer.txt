@@ -1,0 +1,6 @@
+Question 1: If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category. Does JAVA allow you to do this?
+- Yes, JAVA does allow you to do this since JAVA has the ability of overloading, which allow you to create methods that have the same name but different in type of parameter, number of paramerter
+Question 2: After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+- Because in here, we only swaped the two references which are o1 and o2, the jungleDVD and cinderellaDVD references still refer to two old object.
+Question 3: After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+- Because dvd is now refer to jungleDVD and changing the title by using dvd will also affect the object which is being referenced by jungleDVD. 
