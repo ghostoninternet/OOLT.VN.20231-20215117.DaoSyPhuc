@@ -9,16 +9,16 @@ public class DigitalVideoDisc {
         this.title = title;
     }
 
-    public DigitalVideoDisc(String category, String title, float cost) {
+    public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
         this.category = category;
         this.cost = cost;
     }
     
-    public DigitalVideoDisc(String director, String category, String title, float cost) {
+    public DigitalVideoDisc(String title, String category, String director, float cost) {
         this.title = title;
-        this.director = director;
         this.category = category;
+        this.director = director;
         this.cost = cost;
     }
 
