@@ -1,3 +1,5 @@
+package hust.soict.hedspi.lab01;
+
 // Example 2: FirstDialog.java
 import javax.swing.JOptionPane;
 public class FirstDialog {
