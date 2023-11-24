@@ -1,3 +1,4 @@
+package hust.soict.hedspi.lab01;
 // Exercise 4: Write a program to display the number of days of a month
 
 import javax.swing.JOptionPane;
