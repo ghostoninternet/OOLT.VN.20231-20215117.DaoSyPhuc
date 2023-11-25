@@ -10,7 +10,7 @@ public class Cart {
     private List<Media> itemsOrdered = new ArrayList<Media>();
     
     public void addMedia(Media media) {
-    	if (itemsOrdered.size() < 20) {
+    	if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
     		itemsOrdered.add(media);
     		System.out.println("Successfully added an media to cart!");
     	} else {
@@ -20,7 +20,7 @@ public class Cart {
     
     public void addMedia(List<Media> listMedia) {
     	for(int i = 0; i < listMedia.size(); i++) {
-    		if (itemsOrdered.size() < 20) {
+    		if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
     			itemsOrdered.add(listMedia.get(i));
     			System.out.println("Successfully added an media to cart!");
     		} else {
