@@ -3,12 +3,12 @@ package hust.soict.hedspi.aims.media;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Book {
+public class Book extends Media {
 
 	private List<String> authors = new ArrayList<String>();
 	
-	public Book() {
-		
+	public Book(int id, String title, String category, float cost) {
+		super(id, title, category, cost);
 	}
 
 	public List<String> getAuthors() {
