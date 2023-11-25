@@ -1,51 +1,27 @@
 package hust.soict.hedspi.aims.media;
 
-public class DigitalVideoDisc extends Media{
+public class DigitalVideoDisc extends Disc{
     private static int nbDigitalVideoDiscs = 0;
 
-    private String director;
-    private int length;
-
-    public DigitalVideoDisc(String title) {
-    	this.setTitle(title);
-        nbDigitalVideoDiscs++;
-        this.setId(nbDigitalVideoDiscs);
+    public DigitalVideoDisc(int id, String title) {
+    	super(id, title);
+    	nbDigitalVideoDiscs++;
     }
 
-    public DigitalVideoDisc(String title, String category, float cost) {
-        this.setTitle(title);
-        this.setCategory(category);
-        this.setCost(cost);
+    public DigitalVideoDisc(int id, String title, String category, float cost) {
+        super(id, title, category, cost);
         nbDigitalVideoDiscs++;
     }
     
-    public DigitalVideoDisc(String title, String category, String director, float cost) {
-    	this.setTitle(title);
-        this.setCategory(category);
-        this.setCost(cost);
-        this.director = director;
-        nbDigitalVideoDiscs++;
-        this.setId(nbDigitalVideoDiscs);
+    public DigitalVideoDisc(int id, String title, String category, float cost, String director) {
+    	super(id, title, category, cost, director);
+    	nbDigitalVideoDiscs++;
     }
 
-    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-    	this.setTitle(title);
-        this.setCategory(category);
-        this.director = director;
-        this.length = length;
-        this.setCost(cost);
+    public DigitalVideoDisc(int id, String title, String category, float cost, String director, int length) {
+    	super(id, title, category, cost, director, length);
         nbDigitalVideoDiscs++;
-        this.setId(nbDigitalVideoDiscs);
     }
-
-    
-    public String getDirector() {
-		return director;
-	}
-
-	public int getLength() {
-		return length;
-	}
 
 	public String toString() {
     	return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + ": " + this.getCost();
