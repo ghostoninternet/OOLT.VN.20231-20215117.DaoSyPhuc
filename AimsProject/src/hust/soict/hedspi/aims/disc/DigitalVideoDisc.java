@@ -43,6 +43,10 @@ public class DigitalVideoDisc {
         id = nbDigitalVideoDiscs;
     }
 
+    public int getId() {
+    	return id;
+    }
+    
     public String getTitle() {
         return title;
     }
@@ -65,5 +69,17 @@ public class DigitalVideoDisc {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+    
+    public String toString() {
+    	return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + ": " + this.getCost();
+    }
+    
+    public boolean isMatch(String title) {
+    	return this.getTitle().equals(title);
+    }
+    
+    public boolean isMatch(int id) {
+    	return this.getId() == id;
     }
 }
