@@ -1,77 +1,53 @@
-package hust.soict.hedspi.aims.disc;
+package hust.soict.hedspi.aims.media;
 
-public class DigitalVideoDisc {
+public class DigitalVideoDisc extends Media{
     private static int nbDigitalVideoDiscs = 0;
 
-    private int id;
-    private String title;
-    private String category;
     private String director;
     private int length;
-    private float cost;
 
     public DigitalVideoDisc(String title) {
-        this.title = title;
+    	this.setTitle(title);
         nbDigitalVideoDiscs++;
-        id = nbDigitalVideoDiscs;
+        this.setId(nbDigitalVideoDiscs);
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {
-        this.title = title;
-        this.category = category;
-        this.cost = cost;
+        this.setTitle(title);
+        this.setCategory(category);
+        this.setCost(cost);
         nbDigitalVideoDiscs++;
-        id = nbDigitalVideoDiscs;
     }
     
     public DigitalVideoDisc(String title, String category, String director, float cost) {
-        this.title = title;
-        this.category = category;
+    	this.setTitle(title);
+        this.setCategory(category);
+        this.setCost(cost);
         this.director = director;
-        this.cost = cost;
         nbDigitalVideoDiscs++;
-        id = nbDigitalVideoDiscs;
+        this.setId(nbDigitalVideoDiscs);
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-        this.title = title;
-        this.category = category;
+    	this.setTitle(title);
+        this.setCategory(category);
         this.director = director;
         this.length = length;
-        this.cost = cost;
+        this.setCost(cost);
         nbDigitalVideoDiscs++;
-        id = nbDigitalVideoDiscs;
+        this.setId(nbDigitalVideoDiscs);
     }
 
-    public int getId() {
-    	return id;
-    }
     
-    public String getTitle() {
-        return title;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
     public String getDirector() {
-        return director;
-    }
+		return director;
+	}
 
-    public int getLength() {
-        return length;
-    }
+	public int getLength() {
+		return length;
+	}
 
-    public float getCost() {
-        return cost;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    
-    public String toString() {
+	public String toString() {
     	return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + ": " + this.getCost();
     }
     
