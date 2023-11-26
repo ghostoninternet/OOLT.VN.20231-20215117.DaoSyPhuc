@@ -32,8 +32,12 @@ public class Track implements Playable {
 	}
 	
 	public void play() {
-    	System.out.println("Playing track: " + this.getTitle());
-    	System.out.println("Track length: " + this.getLength());
+		if (this.getLength() <= 0) {
+			System.out.println("Track " + this.getTitle() + " can't be played");
+		} else {			
+			System.out.println("Playing track: " + this.getTitle());
+			System.out.println("Track length: " + this.getLength());
+		}
     }
 	
 	public String toString() {

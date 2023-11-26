@@ -3,28 +3,23 @@ package hust.soict.hedspi.aims.media;
 import java.util.List;
 import java.util.ArrayList;
 
-public class CompactDisc extends Disc implements Playable {
-	private static int nbCompactDiscs = 0;
-	
+public class CompactDisc extends Disc implements Playable {	
 	private String artist;
 	private List<Track> tracks = new ArrayList<Track>();
 	
 	public CompactDisc(int id, String title, String artist) {
 		super(id, title);
 		this.artist = artist;
-		nbCompactDiscs++;
 	}
 
 	public CompactDisc(int id, String title, String artist, String category, float cost) {
 	    super(id, title, category, cost);
 	    this.artist = artist;
-	    nbCompactDiscs++;
 	}
 	    
 	public CompactDisc(int id, String title, String artist, String category, float cost, String director) {
 		super(id, title, category, cost, director);
 		this.artist = artist;
-		nbCompactDiscs++;
 	}
 
 	public String getArtist() {
