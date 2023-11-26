@@ -27,12 +27,6 @@ public class CompactDisc extends Disc implements Playable {
 		nbCompactDiscs++;
 	}
 
-	public CompactDisc(int id, String title, String artist, String category, float cost, String director, int length) {
-		super(id, title, category, cost, director, length);
-		this.artist = artist;
-		nbCompactDiscs++;
-	}
-
 	public String getArtist() {
 		return artist;
 	}
@@ -40,18 +34,18 @@ public class CompactDisc extends Disc implements Playable {
 	public void addTrack(Track track) {
 		if(!tracks.contains(track)) {
 			tracks.add(track);
-			System.out.printf("Successfully added a track with title %s and length %d to tracks list!", track.getTitle(), track.getLength());
+			System.out.printf("Successfully added a track with title %s and length %d to tracks list!\n", track.getTitle(), track.getLength());
 		} else {
-			System.out.printf("Track with title %s and length %d is already existed!", track.getTitle(), track.getLength());
+			System.out.printf("Track with title %s and length %d is already existed!\n", track.getTitle(), track.getLength());
 		}
 	}
 	
 	public void removeTrack(Track track) {
 		if(tracks.contains(track)) {
 			tracks.remove(track);
-			System.out.printf("Successfully removed a track with title %s and length %d out of tracks list!", track.getTitle(), track.getLength());
+			System.out.printf("Successfully removed a track with title %s and length %d out of tracks list!\n", track.getTitle(), track.getLength());
 		} else {
-			System.out.printf("Track with title %s and length %d is not existed!", track.getTitle(), track.getLength());
+			System.out.printf("Track with title %s and length %d is not existed!\n", track.getTitle(), track.getLength());
 		}
 	}
 	
@@ -68,5 +62,9 @@ public class CompactDisc extends Disc implements Playable {
 		for(Track track: tracks) {
 			track.play();
 		}
+	}
+	
+	public String toString() {
+		return "CD - " + this.getId() + " - " + this.getTitle() + " - " + this.getArtist() + " - " + this.getDirector() + " - " + this.getCategory() + " - "  + this.getLength() + " - " + this.getCost();
 	}
 }
