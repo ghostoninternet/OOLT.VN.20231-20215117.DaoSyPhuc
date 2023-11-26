@@ -48,7 +48,15 @@ public abstract class Media {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
-	
+    
+    public boolean isMatch(String title) {
+    	return this.getTitle().equals(title);
+    }
+    
+    public boolean isMatch(int id) {
+    	return this.getId() == id;
+    }
+    
 	public boolean equals(Object obj) {
 		if (obj instanceof Media) {			
 			Media that = (Media) obj;
