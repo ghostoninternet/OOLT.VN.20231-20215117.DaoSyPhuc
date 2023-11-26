@@ -24,7 +24,7 @@ public class DigitalVideoDisc extends Disc implements Playable{
     }
 
 	public String toString() {
-    	return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + ": " + this.getCost();
+    	return "DVD - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + " - " + this.getCost();
     }
     
     public boolean isMatch(String title) {
