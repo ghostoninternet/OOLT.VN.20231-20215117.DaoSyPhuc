@@ -43,4 +43,8 @@ public class Store {
 			System.out.println(i+1 + ". " + itemsInStore.get(i).toString() );
 		}
 	}
+	
+	public List<Media> getItemsInStore() {
+		return itemsInStore;
+	}
 }

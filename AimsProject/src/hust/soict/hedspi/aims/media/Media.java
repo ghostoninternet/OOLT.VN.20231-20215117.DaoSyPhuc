@@ -36,19 +36,7 @@ public abstract class Media {
 	public float getCost() {
 		return cost;
 	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public void setCategory(String category) {
-		this.category = category;
-	}
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
-    
+	
     public boolean isMatch(String title) {
     	return this.getTitle().equals(title);
     }
