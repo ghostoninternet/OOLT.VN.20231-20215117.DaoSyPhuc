@@ -25,7 +25,7 @@ public class Track implements Playable {
 	public boolean equals(Object obj) {
 		if (obj instanceof Track) {			
 			Track that = (Track) obj;
-			if (this.title != that.title) return false;
+			if (this.title.equals(that.title)) return false;
 			if (this.length != that.length) return false;
 			return true;
 		} else return false;
