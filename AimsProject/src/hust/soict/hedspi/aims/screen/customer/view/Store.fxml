@@ -13,15 +13,12 @@
 
 
 <VBox alignment="CENTER" prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
-   <padding>
-      <Insets left="20.0" />
-   </padding>
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
             <Label text="AIMS" textFill="#004cff">
                <font>
-                  <Font name="Arial" size="50.0" />
+                  <Font size="50.0" />
                </font>
                <HBox.margin>
                   <Insets left="10.0" />
