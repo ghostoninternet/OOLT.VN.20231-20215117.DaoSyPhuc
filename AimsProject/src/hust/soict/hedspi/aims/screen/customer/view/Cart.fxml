@@ -92,7 +92,7 @@
                   </Label>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" style="-fx-background-color: #004cff;" text="Place Order" textFill="WHITE">
+            <Button fx:id="btnPlaceOrder" mnemonicParsing="false" onAction="#btnPlaceOrderPressed" style="-fx-background-color: #004cff;" text="Place Order" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font>
