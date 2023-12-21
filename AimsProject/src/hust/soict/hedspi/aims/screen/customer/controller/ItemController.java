@@ -28,16 +28,17 @@ public class ItemController {
 
     @FXML
     void btnAddToCartClicked(ActionEvent event) {
-
+    	cart.addMedia(media);
     }
 
     @FXML
     void btnPlayClicked(ActionEvent event) {
-
+    	Playable playableMedia = (Playable) media;
+    	playableMedia.play();
     }
     
-    public ItemController() {
-    	
+    public ItemController(Cart cart) {
+    	this.cart = cart;
     }
     
     public void setData(Media media) {
