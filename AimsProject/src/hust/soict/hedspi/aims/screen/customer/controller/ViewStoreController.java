@@ -43,7 +43,7 @@ public class ViewStoreController {
         	try {
         		FXMLLoader fxmlLoader = new FXMLLoader();
         		fxmlLoader.setLocation(getClass().getResource(ITEM_FXML_FILE_PATH));
-        		ItemController itemController = new ItemController(cart);
+        		ItemController itemController = new ItemController();
         		fxmlLoader.setController(itemController);
         		AnchorPane anchorPane = new AnchorPane();
         		anchorPane = fxmlLoader.load();

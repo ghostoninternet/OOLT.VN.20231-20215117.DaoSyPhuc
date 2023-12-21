@@ -36,8 +36,8 @@ public class ItemController {
 
     }
     
-    public ItemController(Cart cart) {
-    	this.cart = cart;
+    public ItemController() {
+    	
     }
     
     public void setData(Media media) {

@@ -11,11 +11,11 @@
    <children>
       <VBox alignment="CENTER" prefHeight="175.0" prefWidth="305.0">
          <children>
-            <Label fx:id="lblTitle" alignment="CENTER" prefHeight="50.0" prefWidth="305.0" text="Title" />
-            <Label fx:id="lblCost" alignment="CENTER" prefHeight="50.0" prefWidth="305.0" text="Cost" />
+            <Label fx:id="lblTitle" alignment="CENTER" prefHeight="50.0" prefWidth="305.0" text="Label" />
+            <Label fx:id="lblCost" alignment="CENTER" prefHeight="50.0" prefWidth="305.0" text="Label" />
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="305.0" spacing="20.0">
                <children>
-                  <Button fx:id="btnAddToCart" mnemonicParsing="false" onAction="#btnAddToCartClicked" prefHeight="50.0" prefWidth="305.0" text="Add to cart" />
+                  <Button fx:id="btnAddToCart" mnemonicParsing="false" onAction="#btnAddToCartClicked" prefHeight="50.0" prefWidth="305.0" text=" Add to Cart" />
                   <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#btnPlayClicked" prefHeight="50.0" prefWidth="305.0" text="Play" />
                </children>
             </HBox>
