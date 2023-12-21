@@ -4,10 +4,16 @@ import java.util.Collections;
 import java.util.List;
 
 import hust.soict.hedspi.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private List<Media> itemsOrdered = new ArrayList<Media>();
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+    
+    public ObservableList<Media> getItemsOrdered() {
+    	return itemsOrdered;
+    }
     
     public void addMedia(Media media) {
     	if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
