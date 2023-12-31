@@ -45,11 +45,13 @@ public abstract class Media {
     	return this.getId() == id;
     }
     
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) throws ClassCastException {
 		if (obj instanceof Media) {			
 			Media that = (Media) obj;
 			if (this.title != that.title) return false;
 			return true;
-		} else return false;
+		} else {
+			throw new ClassCastException("ERROR: Object can not cast to Media type");
+		}
 	}
 }

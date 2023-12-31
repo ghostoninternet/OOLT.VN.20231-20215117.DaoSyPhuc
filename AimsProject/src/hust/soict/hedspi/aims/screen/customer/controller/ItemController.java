@@ -1,6 +1,9 @@
 package hust.soict.hedspi.aims.screen.customer.controller;
 
+import javax.naming.LimitExceededException;
+
 import hust.soict.hedspi.aims.cart.Cart;
+import hust.soict.hedspi.aims.exception.PlayerException;
 import hust.soict.hedspi.aims.media.Media;
 import hust.soict.hedspi.aims.media.Playable;
 import javafx.event.ActionEvent;
@@ -27,12 +30,12 @@ public class ItemController {
     private Button btnPlay;
 
     @FXML
-    void btnAddToCartClicked(ActionEvent event) {
+    void btnAddToCartClicked(ActionEvent event) throws LimitExceededException {
     	cart.addMedia(media);
     }
 
     @FXML
-    void btnPlayClicked(ActionEvent event) {
+    void btnPlayClicked(ActionEvent event) throws PlayerException {
     	Playable playableMedia = (Playable) media;
     	playableMedia.play();
     }
@@ -49,7 +52,7 @@ public class ItemController {
 			btnPlay.setVisible(true);
 		} else {
 			btnPlay.setVisible(false);
-			HBox.setMargin(btnAddToCart, new Insets(0, 0, 0, 60));
+			HBox.setMargin(btnAddToCart, new Insets(0, 0, 0, 105));
 		}
 	}
 }

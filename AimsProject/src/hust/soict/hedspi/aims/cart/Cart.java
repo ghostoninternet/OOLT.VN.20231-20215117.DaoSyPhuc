@@ -1,7 +1,8 @@
 package hust.soict.hedspi.aims.cart;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import javax.naming.LimitExceededException;
 
 import hust.soict.hedspi.aims.media.Media;
 import javafx.collections.FXCollections;
@@ -15,12 +16,13 @@ public class Cart {
     	return itemsOrdered;
     }
     
-    public void addMedia(Media media) {
+    public void addMedia(Media media) throws LimitExceededException {
     	if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
     		itemsOrdered.add(media);
     		System.out.println("Successfully added an media to cart!");
     	} else {
     		System.out.println("Cart is now full. Can't add more media to cart!");
+    		throw new LimitExceededException("ERROR: The number of media has reached its limit");
     	}
     }
     

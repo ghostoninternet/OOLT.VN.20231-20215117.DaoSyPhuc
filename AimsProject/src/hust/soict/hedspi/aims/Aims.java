@@ -3,7 +3,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.naming.LimitExceededException;
+
 import hust.soict.hedspi.aims.cart.Cart;
+import hust.soict.hedspi.aims.exception.PlayerException;
 import hust.soict.hedspi.aims.store.Store;
 import hust.soict.hedspi.aims.media.Media;
 import hust.soict.hedspi.aims.media.DigitalVideoDisc;
@@ -94,7 +97,7 @@ public class Aims {
 		}
 	}
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws LimitExceededException, PlayerException {
        Store store = new Store();
        Cart cart = new Cart();
        while(true) {
@@ -143,10 +146,18 @@ public class Aims {
         	   							} else if (option == 2) {
         	   								if (founded instanceof DigitalVideoDisc) {
         	   									DigitalVideoDisc dvd = (DigitalVideoDisc) founded;
-        	   									dvd.play();
+        	   									try {
+        	   										dvd.play();
+        	   									} catch (PlayerException e) {
+        	   										throw e;
+        	   									}
         	   								} else {
         	   									CompactDisc cd = (CompactDisc) founded;
-        	   									cd.play();
+        	   									try {
+        	   										cd.play();
+        	   									} catch (PlayerException e) {
+        	   										throw e;
+        	   									}
         	   								}
         	   							}
         	   						}
@@ -168,10 +179,18 @@ public class Aims {
         	   					if (founded != null) {
         	   						if (founded instanceof DigitalVideoDisc) {
 	   									DigitalVideoDisc dvd = (DigitalVideoDisc) founded;
-	   									dvd.play();
+	   									try {
+	   										dvd.play();
+	   									} catch (PlayerException e) {
+	   										throw e;
+	   									}
 	   								} else if (founded instanceof CompactDisc) {
 	   									CompactDisc cd = (CompactDisc) founded;
-	   									cd.play();
+	   									try {
+	   										cd.play();
+	   									} catch (PlayerException e) {
+	   										throw e;
+	   									}
 	   								} else {
 	   									System.out.println("Media book can't be play!");
 	   								}
@@ -277,10 +296,18 @@ public class Aims {
         	   					if (founded != null) {
         	   						if (founded instanceof DigitalVideoDisc) {
 	   									DigitalVideoDisc dvd = (DigitalVideoDisc) founded;
-	   									dvd.play();
+	   									try {
+	   										dvd.play();
+	   									} catch (PlayerException e) {
+	   										throw e;
+	   									}
 	   								} else if (founded instanceof CompactDisc) {
 	   									CompactDisc cd = (CompactDisc) founded;
-	   									cd.play();
+	   									try {
+	   										cd.play();
+	   									} catch (PlayerException e) {
+	   										throw e;
+	   									}
 	   								} else {
 	   									System.out.println("Media book can't be play!");
 	   								}
