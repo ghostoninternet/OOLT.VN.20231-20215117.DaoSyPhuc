@@ -1,5 +1,7 @@
 package hust.soict.hedspi.test.screen.customer.cart;
 
+import javax.naming.LimitExceededException;
+
 import hust.soict.hedspi.aims.cart.Cart;
 import hust.soict.hedspi.aims.media.Book;
 import hust.soict.hedspi.aims.media.DigitalVideoDisc;
@@ -28,7 +30,7 @@ public class TestViewCartScreen extends Application {
 		primaryStage.show();
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws LimitExceededException {
 		cart = new Cart();
 		store = new Store();
 		

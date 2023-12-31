@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import hust.soict.hedspi.aims.exception.PlayerException;
 import hust.soict.hedspi.aims.media.Media;
 import hust.soict.hedspi.aims.media.Playable;
 
@@ -52,7 +53,12 @@ public class MediaStore extends JPanel {
 			        
 			        mainGui.setBorder(new EmptyBorder(20, 20, 20, 20));
 			        mainGui.add(new JLabel("Playing: " + media.getClass().getSimpleName() + " " + media.getTitle()  +"\n"), BorderLayout.CENTER);
-			        ((Playable) media).play();
+			        try {
+						((Playable) media).play();
+					} catch (PlayerException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 			        JPanel buttonPanel = new JPanel(new FlowLayout());
 			        mainGui.add(buttonPanel, BorderLayout.SOUTH);
 
